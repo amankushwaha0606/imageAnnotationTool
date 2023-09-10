@@ -5,8 +5,8 @@ Welcome to the Image Annotation Tool! This project was generated using Angular v
 ## Table of Contents
 - [Development Server](#development-server)
 - [Features](#features)
-    1. [Make Boundaries on Images](#1-make-boundaries-on-image)
-    2. [Move and Edit Boundaries](#2-move-and-edit-boundaries)
+    1. [Make Boundaries on Images](#1-make-boundaries-on-images)
+    2. [Move, Edit, and Remove Boundaries](#2-move-edit-and-remove-boundaries)
     3. [Input Fields to Edit](#3-input-fields-to-edit)
     4. [Download JSON Data](#4-download-json-data)
     5. [Download Boundaries](#5-download-boundaries)
@@ -29,11 +29,11 @@ With the Image Annotation Tool, you can easily create boundaries on images in di
 
 ### 2. Move, Edit, and Remove Boundaries
 
-You can just take control of your annotations by moving the entire rectangle or adjusting its boundaries. Here's how:
+Take control of your annotations by moving the entire rectangle, adjusting its boundaries, or removing them. Here's how:
 - Create a boundary using the mouse and save it.
 - Click on the edit button to make further adjustments or drag it.
 - You can select individual sides to fine-tune your annotations.
-- Just select any boundary after clicking on the Edit button. Then click remove to delete any boundary.
+- To remove a boundary, select it after clicking on the Edit button and then click the Remove button.
 
 ### 3. Input Fields to Edit
 
