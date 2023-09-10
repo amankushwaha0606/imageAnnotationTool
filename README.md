@@ -1,28 +1,49 @@
-# ImageAnnotationTool
+# Image Annotation Tool
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Welcome to the Image Annotation Tool! This project was generated using Angular version 16.1.4. You can explore the live project on [Image Annotation Tool](https://image-anno-tool.netlify.app/).
 
-## Development server
+## Table of Contents
+- [Development Server](#development-server)
+- [Features](#features)
+    1. [Make Boundaries on Images](#1-make-boundaries-on-image)
+    2. [Move and Edit Boundaries](#2-move-and-edit-boundaries)
+    3. [Input Fields to Edit](#3-input-fields-to-edit)
+    4. [Download JSON Data](#4-download-json-data)
+    5. [Download Boundaries](#5-download-boundaries)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Development Server
 
-## Code scaffolding
+To run the development server, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository.
+2. Run `ng serve` for a development server.
+3. Navigate to `http://localhost:4200/` in your web browser.
 
-## Build
+The application will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+### 1. Make Boundaries on Images
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+With the Image Annotation Tool, you can easily create boundaries on images in different colors. Just select a color from the input color box before making boundaries.
 
-## Running end-to-end tests
+### 2. Move and Edit Boundaries
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Take control of your annotations by moving the entire rectangle or adjusting its boundaries. Here's how:
+- Create a boundary using the mouse and save it.
+- Click on the edit button to make further adjustments or drag it.
+- You can select individual sides to fine-tune your annotations.
 
-## Further help
+### 3. Input Fields to Edit
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# imageAnnotationTool
+For precise annotations, use input fields to edit boundary dimensions and positions, ensuring accuracy in your annotations.
+
+### 4. Download JSON Data
+
+Easily export your annotations as JSON object data for all boundaries in all images. Images of the background are stored in a global array, and you can add your own links to edit your images without any need to change the code.
+
+### 5. Download Boundaries
+
+This functionality is available but commented out in both TypeScript and HTML code. Simply uncomment it to use it and download boundaries in visual form.
+
+Thank you for using the Image Annotation Tool! We hope you find it useful for your image annotation needs. If you have any questions or suggestions, feel free to reach out or contribute to the project.
