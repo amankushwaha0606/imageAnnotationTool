@@ -1,0 +1,33 @@
+<div class="canvas-container">
+    <img id="canvasContainer" [src]="backgroundImageUrls[backgroundImageIndex]" (load)="getCanvasHeightWidth()" class="background-image">
+    <canvas id="canvasElement" [class.drag-cursor]="canDragSelected" (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)"
+        (mouseup)="onMouseUp($event)" [width]="canvasWidth" [height]="canvasHeight" class="canvas-draw">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+</div>
+<div class="grid-container">
+    <div style="position: relative; width: 100%; height: 100%;">
+        <input class="custom-input-color" id="colorPicker" [(colorPicker)]="selectedColor" [style.background]="selectedColor" />
+    </div>
+    <button class="custom-btn" [disabled]="!(!currentRectangle && globalImagesRectangles[backgroundImageIndex] && globalImagesRectangles[backgroundImageIndex].length)"
+        (click)="editRectangle()">{{isEditing ? 'Finish Edit': 'Edit'}}</button>
+    <ng-container *ngIf="selectedRectangle">
+        <div class="custom-input-container">
+            <label for="width">X-END</label>
+            <input type="number" class="custom-input" min="{{selectedRectangle.startX}}"
+                [(ngModel)]="selectedRectangle.endX" (change)="dimensionChanging()" id="width" />
+        </div>
+        <div class="custom-input-container">
+            <label for="height">Y-END</label>
+            <input type="number" class="custom-input" min="{{selectedRectangle.startY}}"
+                [(ngModel)]="selectedRectangle.endY" (change)="dimensionChanging()" id="height" />
+        </div>
+    </ng-container>
+    <button class="custom-btn" [disabled]="!(backgroundImageIndex > 0)" (click)="changeImage(-1)">Previous IMG</button>
+    <button class="custom-btn" [disabled]="!(backgroundImageIndex < backgroundImageUrls.length -1)"
+        (click)="changeImage(1)">Next IMG</button>
+    <button class="custom-btn" [disabled]="!currentRectangle" (click)="saveCurrentCanvas()">SAVE</button>
+    <button class="custom-btn" [disabled]="!(currentRectangle || selectedRectangle)" (click)="removeCurrentCanvas()">Remove</button>
+    <button class="custom-btn" [disabled]="!globalImagesRectangles" (click)="onSubmit()">Submit</button>
+    <!-- <button class="custom-btn" [disabled]="!globalImagesRectangles" (click)="saveCanvasAsImage()">Save on Local</button> -->
+</div>
