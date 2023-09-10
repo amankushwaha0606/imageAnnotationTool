@@ -27,12 +27,13 @@ The application will automatically reload if you change any of the source files.
 
 With the Image Annotation Tool, you can easily create boundaries on images in different colors. Just select a color from the input color box before making boundaries.
 
-### 2. Move and Edit Boundaries
+### 2. Move, Edit, and Remove Boundaries
 
-Take control of your annotations by moving the entire rectangle or adjusting its boundaries. Here's how:
+You can just take control of your annotations by moving the entire rectangle or adjusting its boundaries. Here's how:
 - Create a boundary using the mouse and save it.
 - Click on the edit button to make further adjustments or drag it.
 - You can select individual sides to fine-tune your annotations.
+- Just select any boundary after clicking on the Edit button. Then click remove to delete any boundary.
 
 ### 3. Input Fields to Edit
 
